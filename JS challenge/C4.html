@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to find the area of a triangle where three sides are 5, 6, 7</title>
+</head>
+<body>
+    <!-- Area with Three Side Lengths (Heron's Formula):
+     If you know all three side lengths of the triangle (a, b, and c), you can use Heron's formula:
+
+     Area = √[s * (s - a) * (s - b) * (s - c)]
+
+    Where s is the semiperimeter of the triangle, calculated as:
+    s = (a + b + c) / 2 -->
+
+
+    <h4>Area of a triangle where three sides are 5, 6, 7 => <span id="ans"></span></h4>
+
+  <script>
+
+    let a = 5;
+    let b = 6;
+    let c = 7;
+
+    let S = (a + b + c)/2;
+    // console.log(S)
+
+    let area = Math.sqrt(S * (S - a) *(S - b) *(S - c));
+    console.log("area", area)
+
+    document.getElementById("ans").innerText = area;
+
+  </script>
+    
+</body>
+</html>

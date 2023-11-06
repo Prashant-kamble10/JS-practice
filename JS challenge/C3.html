@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</title>
+  </head>
+  <body>
+    <p>
+      mm-dd-yyyy : <span id="mm"> </span> - <span id="dd"> </span> - <span
+        id="yy"
+      > </span>
+    </p>
+
+    <p>
+      mm/dd/yyyy : <span id="mm1"> </span> / <span id="dd1"> </span> / <span
+        id="yy1"
+      > </span>
+    </p>
+
+    <p>
+      dd-mm-yyyy : <span id="dd2"> </span> - <span id="mm2"> </span> - <span
+        id="yy2"
+      > </span>
+    </p>
+
+    <p>
+      dd/mm/yyyy : <span id="dd3"> </span> / <span id="mm3"> </span> / <span
+        id="yy3"
+      > </span>
+    </p>
+
+    <script>
+      // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+      // let newDate = new Date(2024, 4,      6,    12,     3,        2,      34);
+      // console.log("new", newDate);
+
+      let mont = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      let today = new Date();
+
+      let JsMonth = today.getMonth();
+      let newJsMonth = JsMonth + 1;
+      // console.log(newJsMonth)
+
+      let date = today.getDate();
+      // console.log(date)
+
+      let year = today.getFullYear();
+      // console.log(year)
+
+     document.getElementById("mm").innerText = JsMonth;
+     document.getElementById("mm1").innerText = JsMonth;
+     document.getElementById("mm2").innerText = JsMonth;
+     document.getElementById("mm3").innerText = JsMonth;
+
+     document.getElementById("dd").innerHTML = date;
+     document.getElementById("dd1").innerHTML = date;
+     document.getElementById("dd2").innerHTML = date;
+     document.getElementById("dd3").innerHTML = date;
+
+     document.getElementById("yy").innerText = year;
+     document.getElementById("yy1").innerText = year;
+     document.getElementById("yy2").innerText = year;
+     document.getElementById("yy3").innerText = year;
+    </script>
+  </body>
+</html>

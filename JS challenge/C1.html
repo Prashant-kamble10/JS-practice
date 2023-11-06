@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to display the current day and time
+    </title>
+  </head>
+
+  <body>
+    <div>Current year : <span id="Y"> </span></div>
+    <div>Current month : <span id="M"> </span></div>
+
+    <div>Today is : <span id="CurrDay"> </span></div>
+
+    <div>Current time is : <span id="currTime"> </span></div>
+
+    <script>
+      let arr = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thusday",
+        "Friday",
+        "Saturday",
+      ];
+      let mont = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      let today = new Date();
+
+      let hour = today.getHours();
+      let min = today.getMinutes();
+      let sec = today.getSeconds();
+
+      var timestamp = hour >= 12 ? " PM " : " AM ";
+      hour = hour > 12 ? hour - 12 : hour;
+    
+
+      document.getElementById("currTime").innerHTML = hour + " " + ": " + min + ": " + sec + " " + timestamp ;
+       
+
+      let day = today.getDay();
+      document.getElementById("CurrDay").innerHTML = arr[day];
+
+      let yr = today.getFullYear();
+      document.getElementById("Y").innerHTML = yr;
+
+      let month = today.getMonth();
+      document.getElementById("M").innerHTML = mont[month];
+
+      // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+      // let newDate = new Date(2024, 4,      6,    12,     3,        2,      34);
+      // console.log("new", newDate);
+    </script>
+  </body>
+</html>
