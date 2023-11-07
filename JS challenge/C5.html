@@ -10,21 +10,19 @@
     </title>
   </head>
   <body>
-      
-
-
+    <button onclick="clicked()">Rotate string :</button>
+    <span id="OGname"></span>
+    <h4><span id="final"></span></h4>
 
     <script>
-     let name = "prashant";
+      let name = "prashant";
+      document.getElementById("OGname").innerText = name;
 
-    //  setInterval(()=>{
-    //      name = name[name.length -1] + name.substring(0, name.length -1);
-    //   console.log(name)
-    //  }, 1000)
-
-     
-
-   
+      function clicked() {
+        name = name[name.length - 1] + name.substring(0, name.length - 1);
+        document.getElementById("final").innerHTML = name;
+        console.log(name);
+      }
     </script>
   </body>
 </html>
