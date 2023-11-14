@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).  </title>
+</head>
+<body>
+    <label >Number 1 : </label>
+<input type="number" name="num1" id="num1" value="" placeholder="Enter Number">
+<br><br>
+<label >Number 2 : </label>
+<input type="number" name="num2" id="num2" value="" placeholder="Enter Number">
+<br><br>
+<button onclick="multiply()">Multiply</button>
+<button onclick="divide()">Divide</button>
+
+<h2>Multiply Result : <span id="mulRes"></span></h2>
+<h2>Divide Result : <span id="divRes"></span></h2>
+
+    <script>
+            function multiply(){
+                
+                let Num1 = document.getElementById("num1").value;
+            //    console.log(Num1)
+               let Num2 = document.getElementById("num2").value;
+            //    console.log(Num2)
+
+               let a = Num1;
+               let b = Num2;
+
+               let multiplyResult = a * b;
+               console.log(multiplyResult)
+               document.getElementById("mulRes").innerHTML = multiplyResult;
+            } 
+
+
+            function divide(){
+                
+                let Num1 = document.getElementById("num1").value;
+            //    console.log(Num1)
+               let Num2 = document.getElementById("num2").value;
+            //    console.log(Num2)
+
+               let a = Num1;
+               let b = Num2;
+
+               let divideResult = a/b;
+               console.log(divideResult)
+               document.getElementById("divRes").innerHTML = divideResult;
+            } 
+    </script>
+</body>
+</html>
