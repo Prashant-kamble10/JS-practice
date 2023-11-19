@@ -6,6 +6,40 @@
     <title>Write a JavaScript program to calculate the days left before Christmas. </title>
 </head>
 <body>
-    
+    <script>
+     function timeDifference(){
+        let today = new Date();
+        console.log(today)
+
+        let christmasDate = new Date(2023, 11, 25)
+        console.log(christmasDate)
+
+        let final = christmasDate - today;
+        console.log(final)
+        
+        let output = Math.floor((final) / (86400000))
+        // 1 hours = 60 min
+        // 2 hours = 2 x 60 = 120 min
+        // 24 hours = 24 x 60 = 1440 min  (total min in a day)
+
+        // total sec in a day = (total min in a day) x 60 = 1440 x 60 = 86,400 sec (total sec in a day)
+        // total Millisec in a day = (total sec in a day) x 1000 = 8,64,00,000 Millisec
+        console.log(output, "days")
+
+
+        let hours = Math.floor((final % (86400000)) / (3600000))   // 1 hour in millisec = 60 x 60 x 10000 
+        console.log(hours, "hours")
+
+        let min = Math.floor((final % (3600000)) / (60000))        // 1 min in millisec =  60 x 10000 
+        console.log(min, "minutes")
+
+        let sec =  Math.floor((final % (60000)) / (1000))         // 1 sec in millisec = 10000 
+        console.log(sec, "seconds")
+
+     }
+     timeDifference()
+    //  setInterval(timeDifference, 1000)
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to check whether a given integer is within 20
+      of 100 or 400.
+    </title>
+  </head>
+  <body>
+    <script>
+      function check_Range_Of_100_Within_20s(num) {
+        if (num >= 80 && num <= 120) {
+          console.log("Number is within 20s range");
+        } else {
+          console.log(
+            "Number is not within 20s range or must be equal to 80,100,120"
+          );
+        }
+      }
+
+      check_Range_Of_100_Within_20s(88);
+      check_Range_Of_100_Within_20s(118);
+      check_Range_Of_100_Within_20s(1001);
+
+      // OR 
+
+      // Define a function named testhundred that takes a parameter x
+function testhundred(x) {
+  // Return true if the absolute difference between 100 and x is less than or equal to 20,
+  // or the absolute difference between 400 and x is less than or equal to 20; otherwise, return false
+  return ((Math.abs(100 - x) <= 20) || (Math.abs(400 - x) <= 20));
+}
+
+// Log the result of calling the testhundred function with the argument 10 to the console
+console.log(testhundred(10));
+
+// Log the result of calling the testhundred function with the argument 90 to the console
+console.log(testhundred(90));
+
+// Log the result of calling the testhundred function with the argument 99 to the console
+console.log(testhundred(99));
+
+// Log the result of calling the testhundred function with the argument 199 to the console
+console.log(testhundred(199));
+
+// Log the result of calling the testhundred function with the argument 200 to the console
+console.log(testhundred(385));
+
+    </script>
+  </body>
+</html>

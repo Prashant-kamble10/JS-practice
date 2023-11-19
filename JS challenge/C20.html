@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Check two given integers, whether one is positive and another one is
+      negative
+    </title>
+  </head>
+  <body>
+    <script>
+      function check_positive_negative_number(Num1, Num2) {
+        if ((Num1 < 0 && Num2 > 0) || (Num1 > 0 && Num2 < 0)) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }
+
+      check_positive_negative_number(3, -3);
+      check_positive_negative_number(3, 3);
+      check_positive_negative_number(-3, -3);
+      check_positive_negative_number(-3, 3);
+    </script>
+  </body>
+</html>

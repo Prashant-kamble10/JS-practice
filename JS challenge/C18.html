@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to check a pair of numbers and return true if
+      one of the numbers is 50 or if their sum is 50.
+    </title>
+  </head>
+  <body>
+    <script>
+      function check(a, b) {
+        if (a == 50 || b == 50 || a + b == 50) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }
+
+      check(50, 30);
+      check(30, 50);
+      check(20, 30);
+      check(25, 30);
+    </script>
+  </body>
+</html>
