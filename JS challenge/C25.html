@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to check whether a given positive number is a
+      multiple of 3 or 7.
+    </title>
+  </head>
+  <body>
+    <script>
+      function multipleOf3and7(num1, num2) {
+        let remainderOf3 = num1 % 3;
+        let outputOf3 = remainderOf3 == 0;
+        console.log(outputOf3);
+
+        let remainderOf7 = num2 % 7;
+        let outputOf7 = remainderOf7 == 0;
+        console.log(outputOf7);
+      }
+
+      multipleOf3and7(10, 10);       // false, false
+      multipleOf3and7(15, 28);       // true, true
+    </script>
+  </body>
+</html>
