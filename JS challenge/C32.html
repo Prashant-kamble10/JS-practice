@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to find the closest value to 100 from two
+      numerical values.
+    </title>
+  </head>
+  <body>
+    <script>
+      function check(num1, num12) {
+        let a = 100 - num1;
+        let b = 100 - num12;
+
+        if (a < b) {
+          console.log(num1);
+        } else {
+          console.log(num12);
+        }
+      }
+
+      check(98, 95);
+      check(20, 80);
+    </script>
+  </body>
+</html>
