@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
+        Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31</title>
+</head>
+<body>
+    <script>
+        function check(x,y,z){
+           if(y>x && z>y ){
+            console.log("Increasing in strict mode")
+           }else if(z > y){
+            console.log("Increasing in soft mode")
+           }else{
+            console.log("undefined")
+           }
+        }
+
+        check(10,15,31)
+        check(24,22,31)
+        check(50,21,15)
+    </script>
+</body>
+</html>
