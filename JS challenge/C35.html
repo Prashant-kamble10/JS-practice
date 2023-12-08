@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a program to check whether a specified character exists between the
+      2nd and 4th positions in a given string.
+    </title>
+  </head>
+  <body>
+    <script>
+      function check(str, letter){
+         let arr = str.split("")
+         console.log('arr: ', arr);
+           if(arr[1] == letter || arr[2]  == letter || arr[3] == letter){
+            console.log("letter exist")
+           }else{
+            console.log("letter does not exist")
+           }
+      }
+
+      check("cricket", "r")
+      check("prashant", "a")
+      check("laptop", "t")
+      check("newmont", "a")
+    </script>
+  </body>
+</html>

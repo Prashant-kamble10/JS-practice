@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to check a student's total marks in various
+      examinations. The student will get A+ grade if the total marks are in the
+      range 89..100 inclusive, if the examination is "Final-exam" the student
+      will receive A+ grade and total marks must be greater than or equal to 90.
+      If the student gets an A+ grade, return true, otherwise return false.
+    </title>
+  </head>
+  <body>
+    <script>
+      function checkGrade(examType, marks) {
+        if (examType === "final-exam" && marks >= 90) {
+          return true;
+        } else if (marks >= 89 && marks <= 100) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(checkGrade("final-exam", 90));
+      console.log(checkGrade("Midterm", 89));
+      console.log(checkGrade("final-exam", 89));
+      console.log(checkGrade("Midterm", 88));
+    </script>
+  </body>
+</html>

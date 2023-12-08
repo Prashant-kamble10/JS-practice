@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program that checks whether the last digit of three
+      positive integers is the same.
+    </title>
+  </head>
+  <body>
+    <script>
+      function check(num1, num2, num3) {
+        let res1 = num1.toString();
+        console.log("res1: ", res1);
+        let arr1 = res1.split("");
+        console.log("arr1: ", arr1);
+
+        let res2 = num2.toString();
+        let arr2 = res2.split("");
+
+        let res3 = num3.toString();
+        let arr3 = res3.split("");
+
+        if (
+          arr1[2] == arr2[2] &&
+          arr1[2] == arr3[2] &&
+          arr2[2] == arr1[2] &&
+          arr2[2] == arr3[2] &&
+          arr3[2] == arr1[2] &&
+          arr3[2] == arr2[2]
+        ) {
+          console.log("match");
+        } else {
+          console.log("no match");
+        }
+      }
+
+      check(100, 200, 300);
+      check(102, 202, 302);
+      check(102, 204, 306);
+    </script>
+  </body>
+</html>
