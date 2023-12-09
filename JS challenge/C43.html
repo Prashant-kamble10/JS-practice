@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to check from three given numbers (non negative
+      integers) that two or all of them have the same rightmost digit.
+    </title>
+  </head>
+  <body>
+    <script>
+     function check(x, y, z) {
+        // Check for non-negative integers
+        if (x < 0 || y < 0 || z < 0) {
+          console.log("Please provide non-negative integers.");
+          return;
+        }
+
+        // Compare the last digits
+        if (x % 10 === y % 10 && y % 10 === z % 10) {
+          console.log("ALL are matching");
+        } else {
+          console.log("Not matching");
+        }
+      }
+
+      // Test cases
+      check(202, 802, 602);
+      check(200, 802, 604);
+      check(-1, 5, 10); // Test with negative number
+    </script>
+  </body>
+</html>
