@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to reverse a given string.  </title>
+</head>
+<body>
+    <script>
+        function reverseString(str){
+            let arr = str.split("")
+         
+            let reverseArray = arr.reverse()
+            
+            let joinArray = reverseArray.join("")
+            console.log(joinArray)
+        }
+
+        reverseString("hello")
+        reverseString("javascript")
+        reverseString("12345")
+        reverseString("!@#$%^")
+        reverseString("")
+        reverseString("hello world")
+        reverseString("aaaa")
+        reverseString("AbCdEf")
+    </script>
+</body>
+</html>
