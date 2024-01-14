@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replace every character in a given string with the character following it in the alphabet</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Replace every character in a given string with the character following it
+      in the alphabet
+    </title>
+  </head>
+  <body>
     <script>
-        
+      // function replaceCharacter(str) {
+      //   let arr = str.split("");
+      //   console.log(arr);
+
+      //   for (let i = 0; i < arr.length; i++) {
+      //     let char_number = arr[i].charCodeAt(arr[i]);
+      //     // console.log('char_number: ', char_number);
+
+      //     switch (char_number) {
+      //       case 90:
+      //         char_number = 64;
+      //         break;
+      //       case 122:
+      //         char_number = 96;
+      //         break;
+      //       default:
+      //         null;
+      //     }
+      //     let char = String.fromCharCode(char_number+1);
+      //     console.log("char: ", char);
+      //   }
+      // }
+
+      // replaceCharacter("pZrashantz");
     </script>
-</body>
+
+    <script>
+        function replaceCharacter(str){
+          let arr =  str.split("")
+          console.log('arr: ', arr);
+
+          for(let i=0; i < arr.length; i++){
+
+            switch(arr[i]){
+
+              case ' ':
+                break;
+
+                case 'z':
+                  arr[i] = 'a';
+                 break;
+
+                 case 'Z':
+                  arr[i] = 'A';
+                  break;
+
+                  default: 
+                    arr[i] = String.fromCharCode(arr[i].charCodeAt(0) + 1);
+            }
+          }
+          console.log("arr1 :", arr)
+          return arr.join('')
+        }
+
+        replaceCharacter("prashantZz")
+        replaceCharacter("abcd")
+        replaceCharacter("a b c d")
+        replaceCharacter("XyZ")
+        replaceCharacter("wxyzZ")
+        replaceCharacter("")
+        replaceCharacter("!@#$%^&*()")
+        replaceCharacter("a1b2c3")
+
+        
+
+
+
+
+    </script>
+  </body>
 </html>

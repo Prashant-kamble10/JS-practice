@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to convert a given number into hours and
+      minutes.
+    </title>
+  </head>
+  <body>
+    <script>
+      function calculateTimeIn24Format(time) {
+        let hours = Math.floor(time / 60);
+        // console.log("hours: ", hours);
+
+        let minute = Math.floor(time % 60);
+        // console.log("minute: ", minute);
+
+        let output = hours + "hrs" + " : " + minute + "min";
+        console.log("output: ", output);
+      }
+
+      calculateTimeIn24Format(450);
+      calculateTimeIn24Format(125);
+      calculateTimeIn24Format(0);
+      calculateTimeIn24Format(45);
+      calculateTimeIn24Format(3);
+      calculateTimeIn24Format(789);
+      calculateTimeIn24Format(90);
+      calculateTimeIn24Format(-90);
+      calculateTimeIn24Format(123.456);
+      calculateTimeIn24Format(1500);
+    </script>
+  </body>
+</html>

@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Write a JavaScript program to capitalize the first letter of each word in a given string. </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to capitalize the first letter of each word in
+      a given string.
+    </title>
+  </head>
+  <body>
     <script>
-        
+      function sample(str) {
+        let capitalize = str.charAt(0).toUpperCase();
+
+        let remainingStr = str.slice(1);
+
+        let output = capitalize + remainingStr;
+      }
+
+      sample("ball");
+      sample("prashant");
+      sample("namaste");
     </script>
-</body>
+  </body>
 </html>

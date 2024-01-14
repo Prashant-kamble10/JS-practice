@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to convert letters of a given string
+      alphabetically.
+    </title>
+  </head>
+  <body>
+    <script>
+      function sortCharacter(str) {
+        let stringAlphabetically = str.split("").sort().join("");
+        console.log("stringAlphabetically: ", stringAlphabetically);
+      }
+
+      sortCharacter("prashant");
+      sortCharacter("world");
+      sortCharacter("openai");
+      sortCharacter("javascript");
+    </script>
+  </body>
+</html>
