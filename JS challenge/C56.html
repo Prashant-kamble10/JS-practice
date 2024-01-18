@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to divide two positive numbers and return the result as string with properly formatted commas.  </title>
+</head>
+<body>
+    <script>
+          function sample(num1, num2){
+               let result = Math.round(num1 / num2)
+               console.log('result: ', result);
+               let str = result.toString()
+            let arr = str.split("")
+            console.log('arr: ', arr);
+            let str1 = arr.toString()
+            console.log('str1: ', str1);
+          }
+
+          sample(80, 6)
+    </script>
+</body>
+</html>

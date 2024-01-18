@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to create one string of specified copies (positive numbers) of a given string.</title>
+</head>
+<body>
+    <script>
+
+        function stringCopies(str, n){
+         
+            let result = str.repeat(n)
+            console.log('result: ', result);
+            console.log('result: ', typeof(result));
+        }
+
+        stringCopies("abc", 5)
+        stringCopies("abc", 0)
+        // stringCopies("abc", -2)
+        stringCopies("abc", 2)
+    </script>
+</body>
+</html>

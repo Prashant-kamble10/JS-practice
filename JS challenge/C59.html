@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to extract the first half of a even string. </title>
+</head>
+<body>
+    <script>
+        function sample(str){
+ 
+            let len = (str.length / 2 )
+            console.log('len: ', len);
+
+            if(len % 2 === 0){
+               let output = str.slice(0, len)
+               console.log('output: ', output);
+            }else(
+                console.log('output: length is odd' )
+            )
+
+        }
+
+        sample("prashant")
+        sample("Sandeepaa")
+    </script>
+</body>
+</html>

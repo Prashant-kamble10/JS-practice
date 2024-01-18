@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to check whether a given string contains an equal number of p's and t's.  </title>
+</head>
+<body>
+    <script>
+        function checkPandT(str){
+            let countP = str.replace(/[^p]/g , "").length
+            console.log('countP: ', countP);
+
+            let countT = str.replace(/[^t]/g, "").length
+            console.log('countT: ', countT);
+
+            if(countP === countT){
+                console.log("Equal no of p's and t's")
+            }else{
+                console.log("Not equal no of p's and t's")
+            }
+        }
+
+        checkPandT("prashant")
+        checkPandT("pollution")
+        checkPandT("poppulation")
+    </script>
+</body>
+</html>

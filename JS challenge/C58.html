@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>. Write a JavaScript program to create an updated string of 4 copies of the last 3 characters of a given original string. The string length must be 3 and above.</title>
+</head>
+<body>
+    <script>
+        function creatCopiesOfLast3Char(str, n){
+
+
+            // let last3Char = str.substr(-3)
+            // let last3Char = str.splice(-3)
+            let last3Char = str.substr(-3)
+            console.log('last3Char: ', last3Char);
+
+            let repeateLast3Char = last3Char.repeat(n)
+            console.log('repeateLast3Char: ', repeateLast3Char);
+        }
+
+        creatCopiesOfLast3Char("prashant", 5)
+        creatCopiesOfLast3Char("sandeepa", 2)
+    </script>
+</body>
+</html>

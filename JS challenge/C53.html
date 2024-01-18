@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.  </title>
+</head>
+<body>
+    <script>
+        function checkChar(str){
+             let regex = /a...b/g;
+             let regex2 = /b...a/g;
+
+             let check = regex.test(str) || regex2.test(str)
+             console.log('check: ', check);
+             
+        }
+
+        checkChar("qwerasdfbty")
+        checkChar("jkjkjbsdfakkjkjk")
+        checkChar("acvdbihiii")
+        checkChar("uyuieoioia...b")
+    </script>
+</body>
+</html>
