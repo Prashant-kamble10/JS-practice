@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to concatenate two strings except for their first character.  </title>
+</head>
+<body>
+    <script>
+        function concatenateStr(str1, str2){
+
+            // firstStr = str1.slice(1, str1.length)
+          let  firstStr = str1.substr(1, str1.length)
+            console.log('firstStr: ', firstStr);
+
+           let secondStr = str2.slice(1, str2.length)
+            console.log('secondStr: ', secondStr);
+
+            let final = firstStr + secondStr
+            console.log('final: ', final);
+
+        }
+
+        concatenateStr("virat", "kohli")
+        concatenateStr("sandeepa", "dhar")
+    </script>
+</body>
+</html>

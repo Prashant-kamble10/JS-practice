@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to concatenate two strings and return the result. If the length of the strings does not match, then remove the characters from the longer string.</title>
+</head>
+<body>
+    <script>
+         function sample(str1, str2){
+
+            let minimum = Math.min(str1.length, str2.length)
+            console.log('minimum: ', minimum);
+
+              if(str1.length === str2.length){
+                console.log("Both strings lengths are same")
+                let final = str1 + str2
+                console.log('final: ', final);
+              }
+
+
+            if(str1.length > str2.length){
+                    let result  = str1.slice(str1.length - minimum)
+                    console.log('result: ', result);
+                    let final = result + str2
+                    console.log('final: ', final);
+            }
+            
+            else if(str2.length > str1.length){
+                let result  = str2.slice(str2.length - minimum)
+                console.log('result: ', result);
+                let final =   str1 + result
+                    console.log('final: ', final);
+            }
+         }
+
+         sample("prashant", "virat")
+         sample("rohit", "virat")
+         sample("bat",  "cricket")
+    </script>
+</body>
+</html>
