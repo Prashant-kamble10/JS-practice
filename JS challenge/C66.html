@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.  </title>
+</head>
+<body>
+    <script>
+        function strBegins(str){
+
+            
+
+            if(str.slice(0,3) === "Los" || str.slice(0,3) === "New"){
+                console.log(str)
+            }else{
+                console.log("blank")
+            }
+            
+        }
+
+        strBegins("Losangels")
+        strBegins("pune")
+        strBegins("NewMumbai")
+
+    </script>
+</body>
+</html>
