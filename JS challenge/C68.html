@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to create a new string using the first and last n characters from a given string. The string length must be larger than or equal to n.  </title>
+</head>
+<body>
+    <script>
+        function sample(str, num){
+          
+             let startChar = str.slice(0,num)
+             console.log('startChar: ', startChar);
+
+             let endChar = str.slice(-(num))
+             console.log('endChar: ', endChar);
+
+             let output = startChar + endChar
+             console.log('output: ', output);
+        }
+
+        sample("prashant", 2)
+        sample("NaviMumbai", 3)
+        
+
+    </script>
+</body>
+</html>

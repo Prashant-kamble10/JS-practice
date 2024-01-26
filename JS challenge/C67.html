@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to create a new string from a given string. This program removes the first and last characters of the string if the first or last character is 'P'. Return the original string if the condition is not satisfied.</title>
+</head>
+<body>
+    <script>
+      function sample(str){
+        let firstChar = str.charAt(0)
+        console.log('firstChar: ', firstChar);
+
+        let lastChar = str.charAt(str.length-1)
+        console.log('lastChar: ', lastChar);
+
+        if(firstChar === lastChar){
+         let output =    str.slice(1,-1)
+         console.log('output: ', output);
+        }else{
+            let output = str
+            console.log('output: ', output);
+        }
+      }
+
+      sample("prashantp")
+      sample("python")
+    </script>
+</body>
+</html>

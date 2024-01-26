@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to check whether the first and last elements are the same in a given array of integers of length 3.</title>
+</head>
+<body>
+    <script>
+        function chechElem(arr){
+
+              let firstElem = arr[0]
+              console.log('firstElem: ', firstElem);
+
+              let lastElem = arr[arr.length-1]
+              console.log('lastElem: ', lastElem);
+
+              if(firstElem === lastElem){
+                console.log("Mactch")
+              }else{
+                console.log("Doesn't Match")
+              }
+            
+        }
+
+        chechElem([1,2,3,4,5,6,7,8,1])
+        chechElem([1,2,3,4,5,6,7,8])
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Write a JavaScript program to find the largest value between the first and last elements and set all the other elements to that value. Display the updated array.  </title>
+</head>
+<body>
+    <script>
+        function largestNumber(arr){
+
+                 let max_value =     Math.max(...arr)
+                 console.log('max_value: ', max_value);
+
+
+               
+                 for(let i = 0; i < arr.length  ; i++){
+                    arr[i] = max_value
+                 
+                 }
+                
+                 console.log(arr)
+                
+        }
+
+        largestNumber([1,2,3,4,5,6,7,8])
+        largestNumber([10,20,80,50,60,70,40])
+    </script>
+</body>
+</html>
