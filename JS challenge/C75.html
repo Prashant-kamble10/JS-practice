@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to create an array taking the middle elements of the two arrays of integer and each length 3.  </title>
+</head>
+<body>
+    <script>
+           function middleElemArray(arr1, arr2){
+            
+           let middleElem_index1 = Math.floor( arr1.length/2)
+           let elem1 = arr1[middleElem_index1]
+           console.log('elem1: ', elem1);
+
+
+           let middleElem_index2 = Math.floor( arr2.length/2)
+           let elem2 = arr2[middleElem_index2]
+           console.log('elem2: ', elem2);
+
+           let output = [elem1,elem2]
+           console.log('output: ', output);
+           }
+
+           middleElemArray([1,2,3,4,5],[9,8,7,6,5])
+    </script>
+</body>
+</html>
