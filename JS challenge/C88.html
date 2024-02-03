@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program that takes two integers and a divisor. If the given divisor divides both integers and does not divide either, two specified integers are similar. Check whether two integers are similar or not. </title>
+</head>
+<body>
+    <script>
+        function sample(int1, int2, div){
+
+            if((int1 % div) == 0 && (int2 % div) == 0){
+                console.log("true")
+            }else{
+                console.log("false")
+            }
+        }
+
+        sample(10,25,5)
+        sample(10,20,4)
+        sample(50,25,5)
+    </script>
+</body>
+</html>

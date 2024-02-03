@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript program to add two digits to a given positive integer
+      of length two.
+    </title>
+  </head>
+  <body>
+    <script>
+      let num = 144;
+
+      let str = num.toString();
+      console.log("str: ", str);
+
+      let arr = str.split("");
+      console.log("arr: ", arr);
+
+      let final = arr.reduce((acc, cum)=> Number(acc) + Number(cum), 0)
+      console.log('final: ', final);
+    </script>
+  </body>
+</html>

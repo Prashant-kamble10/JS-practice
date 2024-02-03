@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to replace each character in a given string with the next in the English alphabet.  
+        Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.</title>
+</head>
+<body>
+    <script>
+        function sample(str){
+ 
+            let arr = str.split("")
+
+            let newArr = [ ]
+            for(i = 0; i < arr.length ;i++){
+                if(arr[i] === "z"){
+                    arr[i] = "`"
+                }
+
+              newArr.push(String.fromCharCode(arr[i].charCodeAt()+1) )
+            }
+            console.log(newArr)
+        }
+
+
+        sample("abcedfz")
+    </script>
+</body>
+</html>

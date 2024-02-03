@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice. </title>
+</head>
+<body>
+    <script>
+        let arr = [10,20,30,40,50,60,40,30,70,80]
+
+        let arrlength1 = arr.filter((item) => item === 30).length
+        let arrlength2 = arr.filter((item) => item === 40).length
+
+        if(arrlength1 > 1 || arrlength2 > 1){
+            console.log("Repeating")
+        }else{
+            console.log("not repeating")
+        }
+    </script>
+</body>
+</html>
