@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to find the kth greatest element in a given array of integers.</title>
+</head>
+<body>
+    <script>
+        function sample(arr, k){
+           
+          let final =  arr.find((elem)=> elem > k)
+          console.log('final: ', final);
+        }
+
+        sample([1,2,3,4,5,6], 4)
+        sample([45,66,22,88,44,99], 87)
+    </script>
+</body>
+</html>
