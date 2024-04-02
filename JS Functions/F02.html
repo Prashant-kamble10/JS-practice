@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function that checks whether a passed string is a
+      palindrome or not
+    </title>
+  </head>
+  <body>
+    <script>
+      function checkPalindrome(str) {
+        let arr = str.split("");
+        console.log("arr: ", arr);
+
+        let arr1 = [];
+        // yaha pe loop aage se piche run hoo raha hai
+        for (let i = 0; i < arr.length; i++) {
+          arr1 += arr[i];
+        }
+        console.log("arr1: ", arr1);
+
+        let arr2 = [];
+        // yaha pe loop piche se aage run hoo raha hai
+        for (let i = arr.length - 1; i >= 0; i--) {
+          arr2 += arr[i];
+        }
+        console.log("arr2: ", arr2);
+
+        if (arr1 === arr2) {
+          console.log("bhai ye toh palindrome nikala");
+        } else {
+          console.log("bhai ye palindrome nahi hai");
+        }
+      }
+
+      checkPalindrome("madam");
+    </script>
+
+    <script>
+      // Define a function named isPalindrome that takes a string parameter (str)
+      function isPalindrome(str) {
+        // Get the length of the string and store it in the constant variable len
+        const len = str.length;
+
+        // Iterate through the first half of the string
+        for (let i = 0; i < len / 2; i++) {
+          // Check if the character at position i is not equal to its corresponding character from the end
+          if (str[i] !== str[len - 1 - i]) {
+            // If not equal, return false as it is not a palindrome
+            return false;
+          }
+        }
+
+        // If the loop completes without returning false, the string is a palindrome, so return true
+        return true;
+      }
+      // Declare constant variables str1, str2, and str3 with different string values
+      const str1 = "madam";
+      const str2 = "nursesrun";
+      const str3 = "fox";
+
+      // Call the isPalindrome function for each string and log the result to the console
+      console.log(isPalindrome(str1));
+      console.log(isPalindrome(str2));
+      console.log(isPalindrome(str3));
+    </script>
+  </body>
+</html>
