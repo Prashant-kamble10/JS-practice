@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort array of numbers in an ascending order</title>
+  </head>
+  <body>
+    <script>
+      // Write a function to sort an array of numbers in an ascending order.
+
+      // The function should take an array of numbers as input.
+
+      // It should return a new array with the numbers sorted in ascending order.
+
+      // The original array should remain unchanged.
+
+      // You are not allowed to use the built-in sort() method.
+
+      function sortArray(arr){
+        
+        // let res = arr.sort()
+        // console.log('res: ', res);              // do check result over here
+
+       
+        let res = arr.sort( (a,b) => a- b)            // ascending order
+        console.log('res: ', res);
+
+        let res1 = arr.sort( (a,b) => b - a)            // ascending order
+        console.log('res1: ', res1);
+
+      }
+
+      sortArray([8, 4, 10, 2, 6])
+    </script>
+  </body>
+</html>

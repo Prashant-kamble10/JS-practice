@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hash Tag Generator</title>
+  </head>
+  <body>
+    <script>
+      //You are required to implement a function generateHash that generates a hash tag from a given input string. The hash tag should be constructed as follows:
+
+      // The input string should be converted to a hash tag format, where each word is capitalized and concatenated together without spaces.
+
+      // If the length of the input string is greater than 280 characters or if the input string is empty or contains only whitespace, the function should return false.
+
+      //Otherwise, the function should return the generated hash tag prefixed with #.
+
+      function hashGenerator(str) {
+        if (str.trim().length === 0 || str.length > 280) {
+          console.log(false);
+        }
+
+        let arr = str.split(" ");
+        // console.log(arr)
+
+        let output = "";
+
+        for (let i = 0; i < arr.length; i++) {
+          output += arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        }
+        console.log("output: ", output);
+
+        let final = "#" + output;
+        console.log("final: ", final);
+      }
+
+      hashGenerator("my name is lakhan");
+    </script>
+
+    <script>
+      function hashGenerator(str) {
+        let arr = str.split(" ");
+
+        let res = arr.map((currElem) =>
+          currElem.replace(currElem[0], currElem[0].toUpperCase())
+        );
+        //   console.log('res: ', res);
+
+        let output = res.join("");
+        console.log("final: ", output);
+
+        let final = `${"#" + output}`;
+        console.log("final: ", final);
+      }
+
+      hashGenerator("my name is lakhan");
+    </script>
+  </body>
+</html>

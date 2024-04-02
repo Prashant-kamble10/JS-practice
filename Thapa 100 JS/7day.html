@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find maximum number</title>
+  </head>
+  <body>
+    <script>
+      // Write a function findMax that takes an array of numbers as input and returns the maximum number in the array.
+
+      function maxNum(arr) {
+        console.log(...arr); // array ke bhandan se azaad ho gaye (array converted to number)
+        console.log(Math.max(...arr));
+      }
+
+      maxNum([1, 5, 3, 9, 2]);
+      maxNum([-10, -5, -3, -9, -2]);
+      maxNum([5]);
+    </script>
+
+    <script>
+      let numbers = [3, 7, 2, 8, 5];
+      let maxNumber = numbers[0]; // Assume the first element is the maximum initially
+
+      for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > maxNumber) {
+          maxNumber = numbers[i];
+        }
+      }
+
+      console.log("Maximum number:", maxNumber);
+    </script>
+  </body>
+</html>

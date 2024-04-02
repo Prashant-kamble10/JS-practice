@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>count no of  Char in a word </title>
+  </head>
+  <body>
+    <script>
+      function countChar(str, char) {
+        let str1 = str.toLowerCase();
+        let char1 = char.toLowerCase();
+
+        let arr = str1.split("");
+        console.log("arr: ", arr);
+
+        let output = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == char1) {
+            output += arr[i];
+          }
+        }
+
+        let final = output.length;
+        console.log("final: ", final);
+      }
+
+      countChar("prashant", "a");
+      countChar("missIssippi", "I");
+    </script>
+
+    <script>
+      function countChar(str, char) {
+        let str1 = str.toLowerCase();
+        let char1 = char.toLowerCase();
+
+        let arr = str1.split("");
+        console.log("arr: ", arr);
+
+      let res = arr.reduce((acc, currElem)=>{
+        
+        if(currElem === char1){
+          acc++;
+        }
+        return acc;
+      },0)
+
+      console.log("res", res)
+      }
+
+      countChar("prashant", "a");
+      countChar("missIssippi", "I");
+    </script>
+  </body>
+</html>
