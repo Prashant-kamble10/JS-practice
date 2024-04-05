@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>check two array elements are same</title>
+  </head>
+  <body>
+    <script>
+      // Write a function arraysAreEqual that takes two arrays arr1 and arr2 as input and returns true if the arrays are equal (i.e., contain the same elements in the same order), and false otherwise.
+
+      // console.log(arraysAreEqual([1, 2, 3], [1, 2, 3]));  Output: true
+
+      // console.log(arraysAreEqual([1, 2, 3], [1, 2, 4]));  Output: false
+
+      // console.log(arraysAreEqual([], [])); // Output: true
+
+      /// Note:
+      // The function should return false if the arrays have different lengths.
+
+
+      function sample(arr1, arr2){
+ 
+          if(arr1.length !== arr2.length ){
+            return false;
+          }else if(arr1 == [] || arr2 == []){
+            return false;
+          }
+
+        for(let i=0; i < arr1.length ; i++ ){
+            if(arr1[i] === arr2[i]){
+                return true;
+            }else{
+               return false;
+            }
+        }
+      }
+        
+       console.log( sample([1,2,3], [1,2,3]))
+        console.log( sample([1,2,3], [1,2,4]))
+        console.log( sample([], []))
+    </script>
+
+    <script>
+        
+        function sample(arr1, arr2){
+            if(arr1.length !== arr2.length){
+            return false;
+          }
+
+          return arr1.every((curVal, index) => curVal == arr2[index])
+        }
+        
+        console.log( sample([1,2,3], [1,2,3]))
+        console.log( sample([1,2,3], [1,2,4]))
+        console.log( sample([], []))
+    </script>
+  </body>
+</html>

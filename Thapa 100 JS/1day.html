@@ -8,10 +8,56 @@
 <body>
     <script>
          function longestWord(str){
+              let arr = str.split(" ")
+              console.log('arr: ', arr);
+
+              let longWord = "";
+              for(let i = 0; i < arr.length; i++){
+                 if(arr[i].length > longWord.length){
+                    longWord = arr[i]
+                 }
+                 
+              }
+              console.log(longWord)
+         }
+
+         longestWord("my name is prashant")
+    </script>
+
+    <script>
+         function longestWord(str){
+             let arr = str.split(" ")
+             console.log('arr: ', arr);
+
+            //  let res = arr.sort((b,a)=> b.length - a.length)                    //  ['my', 'is', 'name', 'prashant']
+             let res = arr.sort((a,b)=> b.length - a.length)                      // ['prashant', 'name', 'my', 'is']
+             console.log('res: ', res);
+             console.log(res[0])
 
          }
 
          longestWord("my name is prashant")
+    </script>
+
+    <script>
+        function longestWord(str){
+             let arr = str.split(" ")
+             console.log('arr: ', arr);
+
+             let res = arr.reduce((acc, curr) => {
+                
+                if(acc.length > curr.length){
+                     return acc
+                }else{
+                   return curr
+                }
+             },"")
+
+             console.log('res: ', res);
+             
+        }
+
+        longestWord("my name is prashant")
     </script>
 </body>
 </html>

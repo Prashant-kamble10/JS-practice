@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate the Average</title>
+  </head>
+  <body>
+    <script>
+      // Write a function called calculateAverage that takes an array of numbers as input and returns the average of those numbers. I
+      // Your function should:
+      // Accept an array of numbers as input.
+      // Calculate the sum of all the numbers in the array.
+      // Divide the sum by the total number of elements in the array to find the average.
+      // Return the calculated average.
+
+      function average(arr){
+            
+        let acc = 0
+        for(let i= 0 ; i < arr.length; i++){
+            acc += arr[i]
+        }
+        console.log("acc", acc)
+        
+
+        let divisor = arr.length;
+        console.log('divisor: ', divisor);
+        
+
+        let output = acc / divisor
+        
+        return output;
+       
+      }
+
+      console.log(average([1,2,3,4,5]))
+    </script>
+
+    <script>
+         function average(arr){
+
+            let res = arr.reduce((acc, curr) =>{
+                return acc += curr  
+            }, 0)
+            console.log("res", res)
+            let divisor = arr.length;
+            console.log('divisor: ', divisor);
+
+            let  output = res / divisor;
+
+            return output;
+
+         }
+
+         console.log(average([1,2,3,4,5]))
+    </script>
+  </body>
+</html>
