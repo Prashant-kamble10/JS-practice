@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Write a function that takes a number as input and returns the sum of its digits.
+
+      // Constraints:
+      // The input number will always be a positive integer.
+      // The input number can have multiple digits.
+      // The output should be the sum of all the digits in the input number.
+      function sum0fDigits(num) {
+        let sum = 0;
+        while (num > 0) {
+          sum = sum + (num % 10);
+          // sum = 0 + 4   => 4
+          // sum = 4 + 3   => 7
+          // sum = 7 + 2   => 9
+          // sum = 9 + 1 => 10
+          num = Math.floor(num / 10);
+          //  num = 123
+          // num = 12
+          // num = 1
+          //  num = 0
+        }
+        return sum;
+      }
+      //   sumOfDigits(1234);
+
+      console.log(sum0fDigits(1234)); // Output: 10
+      console.log(sum0fDigits(4321)); // Output: 10
+      console.log(sum0fDigits(123456)); // Output: 21
+
+      // HomeWork
+      // This function calculates the sum of digits without converting the number to a string.
+    </script>
+
+    <script>
+      function sum0fDigits(num) {
+        let str = num.toString();
+        console.log("str: ", str);
+        let arr = str.split("");
+        console.log("arr: ", arr);
+
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += parseInt(arr[i]);
+        }
+        return sum;
+      }
+
+      console.log(sum0fDigits(1234)); // Output: 10
+      console.log(sum0fDigits(4321)); // Output: 10
+      console.log(sum0fDigits(123456)); // Output: 21
+    </script>
+
+    <script>
+      function sum0fDigits(num) {
+        // console.log(typeof(num))
+
+        // let arr = Array.from(String(num))  
+       // console.log('arr: ', arr);               // arr: ,["1", "2", "3", "4"] 
+        let arr = Array.from(String(num), Number)
+        console.log('arr: ', arr);              // arr: [1, 2, 3, 4]
+      
+        
+        let output = arr.reduce((acc, curr) =>{
+             return acc += curr
+        },0)
+
+        return output;
+
+      }
+
+      console.log(sum0fDigits(1234)); // Output: 10
+      console.log(sum0fDigits(4321)); // Output: 10
+      console.log(sum0fDigits(123456)); // Output: 21
+
+
+
+      
+// Sure, let's break down the line
+
+//  let arr = Array.from(String(num), Number) 
+
+//  in detail:
+
+// String(num): This converts the numeric value num into a string. For example, if num is 1234, then String(num) would result in the string "1234". This step is essential because we want to treat each digit of the number separately.
+
+// Array.from(): This is a static method on the Array object in JavaScript. It creates a new array instance from an array-like or iterable object. The first argument passed to Array.from() is the array-like or iterable object to convert into an array.
+
+// Number: This is a function in JavaScript used for converting a value to a number. When used like this, it serves as a callback function to Array.from().
+
+// So, in summary, Array.from(String(num), Number) is taking the string representation of the number num, converting it into an array, and converting each element (which are individual characters representing digits) into a number. This effectively creates an array where each element is a numeric representation of a digit in the original number. For example, if num is 1234, after this line executes, arr would be [1, 2, 3, 4].
+    </script>
+  </body>
+</html>
