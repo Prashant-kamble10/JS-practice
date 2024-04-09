@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Write a function that takes a string as input and returns the count of vowels in that string. Consider 'a', 'e', 'i', 'o', and 'u' as vowels (both lowercase and uppercase).
+
+      // Constraints:
+
+      // The input string may contain letters in both uppercase and lowercase.
+      // The output should be a non-negative integer representing the count of vowels in the input string.
+
+      function countVowels(str) {
+        let arr = str.split("");
+        console.log("arr", arr);
+
+        let res = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (
+            arr[i] == "a" ||
+            arr[i] == "A" ||
+            arr[i] == "e" ||
+            arr[i] == "E" ||
+            arr[i] == "i" ||
+            arr[i] == "I" ||
+            arr[i] == "o" ||
+            arr[i] == "O" ||
+            arr[i] == "u" ||
+            arr[i] == "u"
+          ) {
+            res.push(arr[i]);
+          }
+        }
+        return res.length;
+      }
+
+      console.log(countVowels("Namaste")); // Output: 3
+
+      console.log(countVowels("The quick brown fox")); // Output: 5
+
+      console.log(countVowels("Brrrp")); // Output: 0
+    </script>
+
+    <script>
+      function countVowels(str) {
+        let vowels = ["a","e","i","o","u"];
+
+        let arr = str.split("")
+
+        let count = 0;
+        for( let char of arr){
+           if(vowels.includes(char.toLowerCase())){
+            count++;
+           }
+        }
+        return count;
+      }
+
+      console.log(countVowels("Namaste")); // Output: 3
+
+      console.log(countVowels("The quick brown fox")); // Output: 5
+
+      console.log(countVowels("Brrrp")); // Output: 0
+    </script>
+  </body>
+</html>
