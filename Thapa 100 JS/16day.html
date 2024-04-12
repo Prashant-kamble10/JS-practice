@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find Min</title>
+  </head>
+  <body>
+    <script>
+      // write a JS function findMin that takes an array of numbers as input and returns the minimum value found in the array
+
+      function sample(arr) {
+        let res = Math.min(...arr);
+        console.log("res: ", res);
+        console.log("res: ", typeof res);
+      }
+
+      sample([5, 10, 2, 8]);
+      sample([5, 3, 0, 12, -7]);
+      sample([]);
+    </script>
+
+    <script>
+      function sample(arr) {
+        arr.sort((a, b) => a - b);
+        // arr.sort((a, b) => b - a);          comment out and see the result
+        console.log(arr[0]);
+      }
+
+      sample([5, 10, 2, 8]);
+      sample([5, 3, 0, 12, -7]);
+      sample([]);
+    </script>
+
+    <script>
+      function findMin(numbers) {
+        if (numbers.length === 0) {
+          // If the array is empty, return undefined or throw an error, depending on your preference.
+          return undefined;
+        }
+
+        let min = numbers[0]; // Initialize min to the first element of the array
+
+        for (let i = 1; i < numbers.length; i++) {
+          if (numbers[i] < min) {
+            min = numbers[i]; // Update min if a smaller value is found
+          }
+        }
+
+        return min;
+      }
+
+      // Example usage:
+      const numbers = [3, 5, 1, -2, 9];
+      console.log(findMin(numbers)); // Output: -2
+    </script>
+  </body>
+</html>

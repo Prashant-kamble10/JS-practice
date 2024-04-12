@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sum of squares</title>
+  </head>
+  <body>
+    <script>
+      // write a JS function to calculate the sum of squares of all elements in an array
+
+      let res = 0;
+      function sample(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          res += arr[i] * arr[i];
+        }
+        console.log(res);
+      }
+
+      sample([1, 2, 3]);
+    </script>
+
+    <script>
+      function sample(arr) {
+        let res = arr.reduce((acc, curr) => acc + curr * curr, 0);
+        console.log("res: ", res);
+      }
+
+      sample([1, 2, 3]);
+    </script>
+
+    <script>
+      function sample(arr) {
+        let sum = 0;
+        for (let elem of arr) {
+          sum = sum + elem * elem;
+        }
+
+        console.log(sum);
+      }
+
+      sample([1, 2, 3]);
+    </script>
+  </body>
+</html>
