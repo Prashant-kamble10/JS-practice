@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> character is uppercase or lowercase.
+    </title>
+  </head>
+  <body>
+    <script>
+      //  Write a function to check if a character is uppercase or lowercase.
+
+      // Constraints:
+      // The character can be any printable ASCII character.
+      // You can assume that the input will always be a string of length 1.
+
+      function sample(char) {
+        if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+          console.log("character is uppercase");
+        }
+
+        if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
+          console.log("character is lowercase");
+        }
+      }
+
+      sample("s");
+      sample("S");
+    </script>
+
+    <script>
+      function sample(char) {
+        if (char === char.toUpperCase()) {
+          console.log("character is uppercase");
+        }
+
+        if (char === char.toLowerCase()) {
+          console.log("character is lowercase");
+        }
+      }
+
+      sample("s");
+      sample("S");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //19: Write a function to check if a given string starts with a specific substring.
+
+      function sample(str, subStr) {
+        let res = str.toLowerCase().startsWith(subStr.toLowerCase());
+        console.log("res: ", res);
+      }
+
+      sample("Prashant", "pras");
+    </script>
+
+    <script>
+        function sample(str, subStr){
+                  let res = str.toLowerCase().slice(0, subStr.length) === subStr.toLowerCase()
+                  console.log('res: ', res);
+        }
+
+        sample("Prashant", "pras")
+    </script>
+  </body>
+</html>

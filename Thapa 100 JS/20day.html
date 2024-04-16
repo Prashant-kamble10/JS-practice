@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reverse a string & number</title>
+  </head>
+  <body>
+
+    <script>
+        // 20. Write a function to reverse a string without using any built-in methods or libraries. The function should take a string as input and return the reversed string.
+
+
+        function sample(str){
+        let arr = str.split("")
+        // let arr = str.split(" ")
+             
+          let reverseStr = "";
+          for(let i = arr.length -1; i >= 0  ; i--){
+            reverseStr += arr[i]
+          }
+
+          console.log(reverseStr)
+        }
+
+        sample("javascript is a scripting language")
+        sample("Namaste")
+    </script>
+
+
+    <script>
+    
+      function reverse(num) {
+        let str = num.toString();
+        let arr = str.split("");
+        let reverse = arr.reverse();
+        let join = reverse.join("");
+        let output = Number(join);
+        console.log("output: ", output);
+        console.log("output: ", typeof output);
+      }
+
+      reverse(123456789);
+    </script>
+
+    <script>
+      function reverse(num) {
+        let str = num.toString(); // Convert number to string
+        let reversedStr = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          // Iterate over the characters in reverse
+          reversedStr += str[i]; // Concatenate characters in reverse order
+        }
+        let reversedNum = parseInt(reversedStr); // Convert reversed string back to number
+        console.log("Reversed number:", reversedNum);
+      }
+
+      reverse(123456789);
+    </script>
+  </body>
+</html>
