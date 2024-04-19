@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Median</title>
+  </head>
+  <body>
+    <script>
+      /// Write a JavaScript function findMedian(arr) that takes an array of numbers as input and returns the median value. If the array has an even number of elements, return the average of the two middle values.
+
+      //? For example, the median of 3, 3, 5, 9, 15 is 5. If there is an even number of observations, then there is no single middle value; the median is then usually defined to be the mean of the two middle values: so the median of 3, 5, 7, 9 is (5+7)/2 = 6.
+
+      //todo Tips
+
+      //? Sort the array in ascending order.
+      // If the array has an odd number of elements, the median is the middle element.
+      //? If the array has an even number of elements, the median is the average of the two middle elements.
+
+      function median(arr) {
+        let sort = arr.sort((a, d) => a - d);
+        // let sort = arr.sort((a,d)=> d- a)
+        console.log("sort: ", sort);
+
+        let len = sort.length;
+        // console.log("len: ", len);
+
+        if (len % 2 === 0) {
+          console.log("array length is even");
+          let res1 = Math.floor(len / 2);
+          //   console.log("res1: ", res1);
+
+          let res2 = res1 - 1;
+          //   console.log("res2: ", res2);
+
+          let avg = (sort[res1] + sort[res2]) / 2;
+          console.log("avg: ", avg);
+        } else {
+          console.log("array length is odd");
+          let res = Math.floor(len / 2);
+          //   console.log("res: ", res);
+
+          let op = sort[res];
+          console.log("op: ", op);
+        }
+      }
+
+      median([5, 3, 9, 1, 7]);
+      median([2, 4, 6, 8]);
+      median([1, 3, 5, 7, 9, 11]);
+    </script>
+  </body>
+</html>
