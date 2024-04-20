@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      count the occurrences of each element in an array and store the counts in
+      an object
+    </title>
+  </head>
+  <body>
+    <script>
+      //   const obj = {};
+
+      //  Setting a property using square brackets
+      //  obj ["name"] = "thapa";
+      //  console.log(obj);       // Output: { key: 'value' }
+
+      //   obj [name] = "thapa";
+      //     console.log(obj);     // Output: {: "thapa"}
+
+      //     obj[1] = "thapa";
+      //     console.log(obj);     // Output: {1: "thapa"}
+
+      //   Accessing a property using square brackets
+      //    console.log(obj["name"]);  // Output: 'thapa';
+
+      //   obj["name"] = "thapa";
+      //     console.log(obj);            // Output:{name: "thapa"}
+      //      console.log(obj["name"])    // Output: 'thapa'
+
+        function sample(arr) {
+          var obj = { };
+          for (let i = 0; i < arr.length; i++) {
+            if (obj[arr[i]]) {
+              obj[arr[i]]++;
+            } else {
+              obj[arr[i]] = 1;
+            }
+          }
+          console.log(obj);
+        }
+
+        sample([10, 6, 1, 2, 4, 3, 3, 2, 2, 2, 8, 5, 8, 8]);
+    </script>
+
+    <script>
+      let num = [10, 6, 1, 2, 4, 3, 3, 2, 2, 2, 8, 5, 8, 8];
+
+      let count = {};
+
+      for (let elem of num) {
+        // console.log(num);
+        // console.log(elem);
+
+        count[elem] = (count[elem] || 0) + 1;
+      }
+      console.log(count);
+    </script>
+  </body>
+</html>
