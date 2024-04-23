@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibnocci series </title>
+</head>
+<body>
+    <script>
+
+        a = 0;
+        b = 1; 
+        
+        function sample(num){
+
+            if(num > 2){
+                c = a + b;
+                a = b;
+                b = c;
+                console.log(c)
+                sample(num -1)
+            }
+        }
+
+        console.log(a)
+        console.log(b)
+        sample(11)
+    </script>
+
+    <script>
+        a = 0;
+        b =1;
+
+        function sample(num){
+            for(let i = num;  i > 2; i--){
+                c = a + b;
+                a = b;
+                b = c;
+                console.log(c)
+            }
+        }
+        console.log(a)
+        console.log(b)
+
+        sample(11)   // no of elements you want from the series
+    </script>
+
+<script>
+    a = 100;
+    b =101;
+
+    function sample(num){
+        for(let i = num;  i > 2; i--){
+            c = a + b;
+            a = b;
+            b = c;
+            console.log(c)
+        }
+    }
+    console.log(a,b)  // hya madhe a ani b nantar cha element phahije so i > 2
+   
+
+    sample(10)   // no of elements you want from the series between 100 to 110
+</script>
+</body>
+</html>

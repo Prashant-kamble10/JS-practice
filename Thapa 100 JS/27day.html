@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repeat the string no of times</title>
+  </head>
+  <body>
+    <script>
+      function sample(str, num) {
+        return num > 0 ? str.repeat(5) : str;
+      }
+
+      console.log(sample("abc", 2));
+    </script>
+
+    <script>
+      function sample(str, num) {
+        let res = "";
+        for (let i = 1; i <= num; i++) {
+          res += str;
+        }
+        return res;
+      }
+
+      console.log(sample("abc", 10));
+    </script>
+  </body>
+</html>
