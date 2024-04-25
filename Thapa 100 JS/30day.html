@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>give me a number sequence between start and end number(using recurssion)</title>
+</head>
+<body>
+    <script>
+        function sample(a,b, arr=[]){
+
+            if(a <= b){
+                arr.push(a)
+                return sample(a+1, b, arr)
+            }
+            return arr;
+
+        }
+
+
+        console.log(sample(0, 5 ))
+    </script>
+</body>
+</html>
