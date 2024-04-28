@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validator</title>
+  </head>
+  <body>
+    <script>
+      //  How many loops do we have in JS ?
+
+      // for loop,
+      //  while loop,
+      //   do-while loop,
+      // for-in loop,
+      //  for-of loop.
+
+      // password should have atleast 1 uppercase char
+      // password should have atleast 1 Lowercase char
+      // password should have atleast 1 number
+      // password length should be atleast 8
+
+      function sample(pswd) {
+        let len = false;
+        let upperCase = false;
+        let lowerCase = false;
+        let num = false;
+
+        for (const char of pswd) {
+          if (pswd.length >= 8) {
+            len = true;
+          }
+          if (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) {
+            num = true;
+          }
+          if (char.charCodeAt() >= 65 && char.charCodeAt() <= 90) {
+            upperCase = true;
+          }
+          if (char.charCodeAt() >= 97 && char.charCodeAt() <= 122) {
+            lowerCase = true;
+          }
+        }
+
+        if (num && len && upperCase && lowerCase) {
+          console.log("true");
+        } else {
+          console.log("false");
+        }
+      }
+
+      sample("abcd1Uqw");
+      sample("abcd1UUbn");
+    </script>
+  </body>
+</html>
