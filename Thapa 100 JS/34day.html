@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove duplicate num from the array</title>
+  </head>
+  <body>
+    <script>
+      // In built functionalities
+
+      function sample(arr){
+        let res = [...new Set(arr)]
+        console.log('res: ', res);
+      }
+
+      sample([1,22,2,10,3,4,2,3,5,6,1,8])
+      sample(['a',"b","b","c","d","e","c","d"])
+    </script>
+
+    <script>
+      // Without In built functionalities
+
+      function sample(arr) {
+        for (i = 0; i < arr.length; i++) {
+          for (j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+              arr.splice(j, 1);
+            }
+          }
+        }
+        console.log(arr);
+      }
+
+      sample([1, 22, 2, 10, 3, 4, 2, 3, 5, 6, 1, 8]);
+      sample(["a", "b", "b", "c", "d", "e", "c", "d"]);
+    </script>
+
+    <script>
+      // Without In built functionalities
+
+      function removeDuplicates(arr) {
+        var uniqueArray = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (uniqueArray.indexOf(arr[i]) === -1) {
+            uniqueArray.push(arr[i]);
+          }
+        }
+        return uniqueArray;
+      }
+
+      // Example usage:
+      var originalArray = [1, 2, 3, 4, 2, 3, 5, 6, 6, 7];
+      var newArray = removeDuplicates(originalArray);
+      console.log(newArray); // Output: [1, 2, 3, 4, 5, 6, 7]
+    </script>
+  </body>
+</html>
