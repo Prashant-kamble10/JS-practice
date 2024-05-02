@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find out if the object is empty or not empty</title>
+  </head>
+  <body>
     <script>
-        
+      function sample(obj) {
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      console.log(sample({}));
+
+      console.log(sample({ name: "prashant" }));
+
+      console.log(sample({ keyWithNull: null }));
+
+      console.log(sample({ keyWithUndefined: undefined }));
     </script>
-</body>
+
+    <script>
+      function sample(obj) {
+
+        return Object.entries(obj).length === 0;
+      }
+
+      console.log(sample({}));
+
+      console.log(sample({ name: "prashant" }));
+
+      console.log(sample({ keyWithNull: null }));
+
+      console.log(sample({ keyWithUndefined: undefined }));
+    </script>
+
+    <script>
+      function sample(obj) {
+
+        return Object.keys(obj).length === 0;
+      }
+
+      console.log(sample({}));
+
+      console.log(sample({ name: "prashant" }));
+
+      console.log(sample({ keyWithNull: null }));
+
+      console.log(sample({ keyWithUndefined: undefined }));
+    </script>
+  </body>
 </html>
