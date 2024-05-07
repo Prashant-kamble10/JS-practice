@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculate age</title>
+  </head>
+  <body>
+    <script>
+      function sample(bday) {
+        let res = new Date(bday);
+        console.log(res.toDateString()); // Sat Apr 10 1999
+      }
+
+      sample("1999-04-10");
+    </script>
+
+    <script>
+      function sample(birthday) {
+        let bday = new Date(birthday);
+        let today = new Date();
+
+        let age = today.getFullYear() - bday.getFullYear();
+        console.log("age: ", age);
+
+        let monthDiff = today.getMonth() - bday.getMonth();
+        console.log("monthDiff: ", monthDiff);
+
+        if (
+          monthDiff < 0 ||
+          (monthDiff === 0 && today.getDate() < bday.getDate())
+        ) {
+          console.log("age: ", age - 1);
+        }
+      }
+
+      sample("1999-05-04"); // 04 may 1999    // date passed compare to today date
+      sample("1999-05-15"); // 15 may 1999    // date yet to come compare to today date
+    </script>
+  </body>
+</html>

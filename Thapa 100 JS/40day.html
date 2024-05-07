@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>generate bar graph depended upon number present in an array</title>
+  </head>
+  <body>
+    <!-- <script>
+      function sample(num) {
+        let constant = "*";
+
+        let res = constant.repeat(num);
+        console.log("res: ", res);
+      }
+
+      sample(8);
+    </script> -->
+<!-- 
+    <script>
+
+        // in built utility function
+       function sample(arr){
+
+        let res = [];
+       
+        for(let i = 0; i < arr.length ; i++){
+            let constant = "*";
+            let num = arr[i] 
+            res.push(constant.repeat(num));
+             
+        }
+        console.log(res.join("\n"));
+
+       }
+
+       sample([2,4,6,8])
+    </script> -->
+
+    <script>
+          // without in built utility function
+          
+          const sample = (arr) =>{
+
+            const newArr = arr.map((currElem, index)=>{
+                let star = "";
+                let num = 0;
+
+                while(num < currElem){
+                    star = star + "*";     
+                    // star += "*";     
+                    num++;
+                }
+                // return `${currElem} : ${star}`;
+                return `${index+1} : ${star}`;
+            })
+           return  newArr.join("\n")
+
+          }
+
+         console.log( sample([2,4,6,8]))
+    </script>
+  </body>
+</html>
