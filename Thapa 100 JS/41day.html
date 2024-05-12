@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency convertor app</title>
+</head>
+<body>
+    <script>
+      const rates ={
+        USD : 1,
+        EUR : 0.9,
+        GBP : 0.8,
+        INR : 82
+      }
+
+
+
+      function sample(amt, FC, TC){
+        //   1 usd = 0.8 gbp
+        //     ?   = 100 gbp
+
+        // amt / GBP currency rate (FC)
+          let convertedAmtInUSD = 0;
+        if(FC === "USD"){
+            console.log(convertedAmtInUSD = amt)
+        }else{
+             convertedAmtInUSD = amt / rates[FC]      // dynamic key
+            // let op = amt / rates.GBP     // static key
+            console.log(convertedAmtInUSD)
+        }
+
+         //   1 usd = 0.9 eur
+        //    125 usd   = ?
+
+        if(TC === "USD"){
+            console.log(convertedAmtInUSD)
+        }else{
+            let final = convertedAmtInUSD * rates[TC]
+            console.log('final: ', final);
+        }
+      }
+
+      sample(100,"USD", "EUR")        // GBP to USD and then, USD to EUR.
+    </script>
+</body>
+</html>
