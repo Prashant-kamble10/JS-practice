@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luhn Algorithm - validate numbers (eg: credit card no, atm no etc) </title>
+</head>
+<body>
+    <script>
+        function luhn(num){
+            console.log('num: ', num);
+            console.log(typeof(num))
+            // num converted to string
+            let str = num.toString();
+            console.log('str: ', str);
+            console.log("str:", typeof(str))
+           // string put into an array
+           let arr = str.split("")
+           console.log('arr: ', arr);
+           // reverse method use on array
+           let rev = arr.reverse();
+           console.log('rev: ', rev);
+           // array which has string in it, got converted to numbers
+           let newArrNum = rev.map(Number);
+           console.log('newArrNum: ', newArrNum);
+
+           // here condition logic is there
+           let res = [];
+         
+           for(i = 0; i < newArrNum.length ;i++){
+            // even array index logic
+            if(i % 2 === 0){
+                res.push(newArrNum[i]);
+            }else{
+                // odd array index logic
+                let storedNum = newArrNum[i] * 2;
+                if(storedNum > 9){
+                    res.push(storedNum - 9)
+                }else{
+                    res.push(storedNum)
+                }
+            }
+           }
+           console.log('res: ', res);
+
+           // whole array sum logic
+          let allSumNum = res.reduce((acc, curr) => acc + curr, 0);
+           console.log('allSumNum: ', allSumNum);
+
+           // modulus logic, decide weather true or false
+           let op = "";
+          
+           if(allSumNum % 10 === 0){
+            op = true;
+           }else{
+            op = false;
+           }
+
+           console.log('op: ', op);
+
+
+        }
+
+        luhn(79927398713);             // true
+        // luhn(4539148803436467);     // true
+        // luhn(8273123273520569);     // false
+    </script>
+</body>
+</html>
