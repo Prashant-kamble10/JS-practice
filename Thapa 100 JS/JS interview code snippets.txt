@@ -1,0 +1,330 @@
+Print number from 1 to 5
+   
+<script>
+      
+        for(i=1; i <= 5 ;i++){
+            console.log(i)
+        }
+
+  </script>
+        
+  
+
+    <script>
+
+        let i =1;
+        while(i<=5){
+            console.log(i)
+            i++
+        }
+
+  </script>
+
+
+ <script>
+
+    let i =1;
+
+    do{
+         console.log(i)
+         i++;
+    }while(i<=5)
+
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    <script>
+      // given year is a leap year or not
+
+      function sample(year) {
+        if ((year % 4 === 0 && year & (100 !== 0)) || year % 400 === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      sample(2000)
+      sample(2100)
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  <script>
+      // sum all the element in the array
+
+      let arr = [1, 2, 3, 4, 5];
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+
+      console.log(sum);
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <script>
+      // create a object and add a method inside the object
+
+      let obj ={
+        name : "prashant",
+        surname : "kamble"
+      }
+
+      console.log(obj)
+
+      obj.location = "airoli"
+      console.log(obj)
+
+      obj.student = ()=>{
+        return "life long"
+      }
+      obj.student = function(){
+        return "life long"
+      }
+      console.log(obj)
+      console.log(obj.student())
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ <body>
+   // manipulate p tag with jS
+
+    <p id="para">original paragraph</p>
+    <script>
+      let content = document.getElementById("para");
+      console.log("content: ", content);
+
+      content.innerText = "duplicate paragraph";
+      content.innerHTML = "duplicate paragraph";
+      content.textContent = "duplicate paragraph";
+    </script>
+  </body>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  <body>
+    // add a button in the webpage through js
+
+    <div id="container"></div>
+
+    <script>
+      let elem = document.getElementById("container");
+
+      let btn = document.createElement("button");
+
+      btn.textContent = "Click karo";
+
+      elem.appendChild(btn);
+    </script>
+  </body>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  <body>
+    // add a button in the webpage that alerts text through js
+
+   <button id="alert">click karo </button>   
+
+    <script>
+    // let btn = document.getElementById("alert")   // <button id="alert">click karo </button>   
+    // let btn = document.querySelector(".alert")   // <button class="alert">click karo </button>   
+    let btn = document.querySelector("#alert")   // <button id="alert">click karo </button>   
+
+    btn.addEventListener("click" , ()=>{
+        alert("clicked")
+    })
+    </script>
+  </body>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  random number btn given range 
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Usage example:
+const min = 1;
+const max = 10;
+const randomNum = getRandomNumber(min, max);
+console.log(randomNum);
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    // increase the count variable by 1 on every function call
+
+    <script>
+      function outer() {
+        let count = 0;
+        return count++
+      }
+
+      console.log(outer());
+      console.log(outer());
+      console.log(outer());
+      console.log(outer());
+    </script>
+
+    <script>
+      function outer() {
+        let count = 0;
+        return function inner(){
+           return count ++
+        }
+      }
+
+ let called = outer()
+
+ console.log(called())
+ console.log(called())
+ console.log(called())
+ console.log(called())
+ console.log(called())
+ console.log(called())
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// using callback function to call apis
+
+  <script>
+      function makeApiCall(url, cb) {
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => cb(data));
+      }
+
+      function handleData(info) {
+        console.log("info", info);
+      }
+
+      function main() {
+        const api1 = "https://jsonplaceholder.typicode.com/posts/1";
+        const api2 = "https://jsonplaceholder.typicode.com/posts/2";
+
+        makeApiCall(api1, handleData);
+        makeApiCall(api2, handleData);
+      }
+
+      main();
+    </script>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// using promises to call apis
+
+   <script>
+      function makeApiCall(url) {
+        return fetch(url).then((res) => res.json());
+      }
+
+      function handleData(data) {
+        console.log("data", data);
+      }
+
+      function main() {
+        const api1 = "https://jsonplaceholder.typicode.com/posts/1";
+        const api2 = "https://jsonplaceholder.typicode.com/posts/2";
+
+        makeApiCall(api1).then(handleData).catch(err => console.log("error"));
+        makeApiCall(api2).then(handleData).catch(err => console.log("error"));
+        // makeApiCall(api1).then(handleData());
+        // makeApiCall(api2).then(handleData());
+      }
+
+      main();
+    </script>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Event Bubbling and event propogation
+
+Event bubbling is a type of event propagation in the HTML DOM API when an event starts from the deepest target element and then bubbles up to the ancestor elements in the hierarchy. This means that if you have nested elements and an event is triggered on the deepest one, the event will also trigger on its ancestors, all the way up to the root element unless stopped.
+
+Here’s an example to illustrate event bubbling:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling Example</title>
+    <style>
+        .outer { padding: 20px; background-color: lightblue; }
+        .inner { padding: 20px; background-color: lightcoral; }
+        .deepest { padding: 20px; background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        Outer Div
+        <div class="inner">
+            Inner Div
+            <div class="deepest">
+                Deepest Div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.outer').addEventListener('click', function() {
+            alert('Outer Div clicked');
+        });
+
+        document.querySelector('.inner').addEventListener('click', function() {
+            alert('Inner Div clicked');
+        });
+
+        document.querySelector('.deepest').addEventListener('click', function() {
+            alert('Deepest Div clicked');
+        });
+    </script>
+</body>
+</html>
+
+In this example:
+
+We have three nested <div> elements with classes outer, inner, and deepest.
+Each <div> has an event listener for the click event.
+When you click on the deepest div, you will see three alerts:
+
+"Deepest Div clicked"
+"Inner Div clicked"
+"Outer Div clicked"
+This happens because the event bubbles up from the deepest div to its ancestors (inner and then outer). The event propagation starts from the deepest target element and then bubbles up to the ancestors.
+
+If you want to stop the event from bubbling up, you can use the event.stopPropagation() method. Here’s how you can modify the example to stop the event from bubbling up:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling Example</title>
+    <style>
+        .outer { padding: 20px; background-color: lightblue; }
+        .inner { padding: 20px; background-color: lightcoral; }
+        .deepest { padding: 20px; background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        Outer Div
+        <div class="inner">
+            Inner Div
+            <div class="deepest">
+                Deepest Div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.outer').addEventListener('click', function() {
+            alert('Outer Div clicked');
+        });
+
+        document.querySelector('.inner').addEventListener('click', function() {
+            alert('Inner Div clicked');
+        });
+
+        document.querySelector('.deepest').addEventListener('click', function(event) {
+            alert('Deepest Div clicked');
+            event.stopPropagation(); // Stop the event from bubbling up
+        });
+    </script>
+</body>
+</html>
+
+Now, when you click on the deepest div, only the "Deepest Div clicked" alert will appear because event.stopPropagation() prevents the event from bubbling up to the ancestor elements.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
